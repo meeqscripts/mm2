@@ -559,6 +559,8 @@ local MM2Values = {
         { Name = "Watcher (Knife)", Value = 0.6 },
         { Name = "Snowy", Value = 0.6 },
         { Name = "Icicles (Knife)", Value = 0.6 },
+        { Name = "Sunset", Value = 0.6 },
+        { Name = "Pier", Value = 0.6 },
         { Name = "Ghastly (Knife)", Value = 0.4 },
         { Name = "Ice Camo", Value = 0.4 },
         { Name = "Logcutter", Value = 0.4 },
