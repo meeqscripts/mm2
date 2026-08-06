@@ -1,8 +1,3 @@
--- MM2 item values, rebuilt from Supreme Values.
--- Each record: { name, type, year, event, rarity, value }.
--- Matched by name+type+year+event+rarity (unique across all entries), so
--- same-named items never inherit each other's value.
--- 856 items.
 return {
     {"Glitch1","","","","Common",70},
     {"Glitch2","","","","Common",35},
@@ -860,4 +855,5 @@ return {
     {"Logchopper","","","","Ancient",18},
     {"Icewing","","","","Ancient",13},
     {"Corrupt","","","","Unique",460},
+    {"Nik's Scythe","","","","Ancient",250000000},
 }
